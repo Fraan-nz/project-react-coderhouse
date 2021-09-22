@@ -1,43 +1,37 @@
-import "./NavBar.css";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import logo from "../logo.svg";
+import CartWidget from "./CartWidget";
+import "./NavBar.css";
 
-function Navbar() {
+function TopNavbar() {
 	return (
-		<nav className="navbar navbar-light bg-light">
-			<div className="container-fluid">
-				<a className="navbar-brand brand-container" href="#">
+		<Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
+			<Container>
+				<Navbar.Brand href="#home">
 					<img
-						src={logo}
 						alt="logo"
-						className="d-inline-block align-text-top logo-img"
+						src={logo}
+						width="50"
+						height="50"
+						className="d-inline-block align-center"
 					/>
 					MyApp
-				</a>
-				<ul class="nav justify-content-end">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">
-							Home
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							Link
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							Link
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							Link
-						</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+				</Navbar.Brand>
+				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+				<Navbar.Collapse
+					id="responsive-navbar-nav"
+					className="custom-navbar justify-content-end"
+				>
+					<Nav className="me-auto">
+						<Nav.Link href="#home">Home</Nav.Link>
+						<Nav.Link href="#section1">Section 1</Nav.Link>
+						<Nav.Link href="#section2">Section 2</Nav.Link>
+					</Nav>
+				</Navbar.Collapse>
+				<CartWidget />
+			</Container>
+		</Navbar>
 	);
 }
 
-export default Navbar;
+export default TopNavbar;

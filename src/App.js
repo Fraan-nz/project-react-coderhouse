@@ -1,14 +1,16 @@
-import logo from "./logo.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
+import TopNavbar from "./components/NavBar";
 import "./App.css";
-import Navbar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
 	return (
-		<header className="App-header">
-			<Navbar />
-			<img src={logo} className="App-logo" alt="logo" />
-			<p>My first react app. Franco Nuñez.</p>
-		</header>
+		<>
+			<TopNavbar />
+			<main className="App-main">
+				<ItemListContainer textTitle="Catalogo" />
+			</main>
+		</>
 	);
 }
 
