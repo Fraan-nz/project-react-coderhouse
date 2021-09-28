@@ -1,16 +1,13 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import TopNavbar from "./components/NavBar";
+import TopNavbar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import "./App.css";
-import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
 	return (
-		<>
+		<div className="app">
 			<TopNavbar />
-			<main className="App-main">
-				<ItemListContainer textTitle="Catalogo" />
-			</main>
-		</>
+			<ItemListContainer textTitle="Catalogo" />
+		</div>
 	);
 }
 

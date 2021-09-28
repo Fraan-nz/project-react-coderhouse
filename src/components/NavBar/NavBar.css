@@ -1,0 +1,23 @@
+.navbar {
+	height: 70px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10vw;
+	position: relative;
+	background-color: blueviolet;
+}
+.navbar__logo {
+	display: none;
+}
+
+@media screen and (min-width: 800px) {
+	.navbar__logo {
+		display: flex;
+		font-size: 2rem;
+		font-weight: 700;
+		flex-basis: 70vw;
+		cursor: pointer;
+	}
+}
