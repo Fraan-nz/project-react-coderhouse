@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import "./ItemCount.css";
+import "./Item.css";
 
-function ItemCount(props) {
-	const { name, initial, stock } = props;
+function Item(props) {
+	const { name, initial, stock, id, description, price, img } = props;
 	const [itemCount, setItemCount] = useState(initial);
 	const countAdd = () => {
 		if (itemCount < stock) setItemCount(itemCount + 1);
@@ -12,8 +12,11 @@ function ItemCount(props) {
 		if (itemCount > 1) setItemCount(itemCount - 1);
 	};
 	return (
-		<div className="item">
+		<div className="item" id={id}>
 			<p className="item__name">{name}</p>
+			<img className="item__img" src={img} alt={name} />
+			<p className="item__desc">{description}</p>
+			<p className="item__price">$ {price}</p>
 			<div className="item__input">
 				<button className="item__minus" onClick={countSub}>
 					-
@@ -28,4 +31,4 @@ function ItemCount(props) {
 	);
 }
 
-export default ItemCount;
+export default Item;
