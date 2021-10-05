@@ -2,21 +2,16 @@ export const MenuItems = [
 	{
 		title: "Home",
 		cName: "navbar__item",
-		url: "#",
+		url: "/",
 	},
 	{
-		title: "Latas",
+		title: "Comerciales",
 		cName: "navbar__item",
-		url: "#",
+		url: "/comercial",
 	},
 	{
-		title: "Packs",
+		title: "Artesanales",
 		cName: "navbar__item",
-		url: "#",
-	},
-	{
-		title: "Contacto",
-		cName: "navbar__item",
-		url: "#",
+		url: "/artesanal",
 	},
 ];

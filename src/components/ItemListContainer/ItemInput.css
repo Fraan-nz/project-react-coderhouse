@@ -1,0 +1,33 @@
+.item__input {
+	width: 100%;
+	border-radius: 5px;
+	padding: 0 0.5em;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	border: 1px solid rgb(216, 216, 216);
+}
+.item__plus,
+.item__minus {
+	font-size: 1.8rem;
+	color: blueviolet;
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+}
+.item__button {
+	width: 100%;
+	padding: 0.4em 0;
+	border: 1px solid blueviolet;
+	border-radius: 5px;
+	background-color: blueviolet;
+	color: white;
+	cursor: pointer;
+}
+.item__button:hover {
+	border: 1px solid blueviolet;
+	background-color: white;
+	color: blueviolet;
+}

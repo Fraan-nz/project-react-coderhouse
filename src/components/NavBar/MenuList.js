@@ -1,5 +1,6 @@
 import React from "react";
 import { MenuItems } from "./MenuItems";
+import { Link } from "react-router-dom";
 import "./MenuList.css";
 
 function MenuList(props) {
@@ -9,9 +10,9 @@ function MenuList(props) {
 			{MenuItems.map((item, index) => {
 				return (
 					<li key={index}>
-						<a href={item.url} className={item.cName}>
+						<Link to={item.url} className={item.cName}>
 							{item.title}
-						</a>
+						</Link>
 					</li>
 				);
 			})}

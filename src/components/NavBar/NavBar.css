@@ -10,6 +10,10 @@
 }
 .navbar__logo {
 	display: none;
+	color: black;
+}
+.navbar__logo-link {
+	text-decoration: none;
 }
 
 @media screen and (min-width: 800px) {

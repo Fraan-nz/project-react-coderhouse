@@ -1,0 +1,38 @@
+.detail {
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 700px;
+	height: 400px;
+	display: flex;
+	border-radius: 5px;
+}
+.detail__img {
+	width: auto;
+	height: 100%;
+}
+.detail__container {
+	width: 100%;
+	margin-left: 2em;
+	padding: 1.5em;
+	text-align: center;
+}
+.detail__title {
+	font-size: 3rem;
+	margin: 0;
+}
+.detail__desc {
+	font-size: 1.5rem;
+}
+.detail__price {
+	font-size: 2.5rem;
+}
+.detail__stock {
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+}
