@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import productsDb from "../../db/productsDb.json";
+import { useCart } from "../../context/CartContext";
 import "./ItemDetailContainer.css";
 
 function ItemDetailContainer() {
 	const [product, setProduct] = useState({});
+	const { cartList } = useCart();
 	const { idProd } = useParams();
 	const getItem = () => {
 		return new Promise((res, rej) => {
@@ -27,7 +29,11 @@ function ItemDetailContainer() {
 			});
 	}, [idProd]);
 	return (
-		<>{Object.keys(product).length !== 0 && <ItemDetail product={product} />}</>
+		<>
+			{Object.keys(product).length !== 0 && (
+				<ItemDetail product={product} cartList={cartList} />
+			)}
+		</>
 	);
 }
 export default ItemDetailContainer;

@@ -25,6 +25,7 @@
 	background-color: blueviolet;
 	color: white;
 	cursor: pointer;
+	margin-bottom: 5px;
 }
 .item__button:hover {
 	border: 1px solid blueviolet;

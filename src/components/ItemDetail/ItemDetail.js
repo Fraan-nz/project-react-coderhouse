@@ -1,15 +1,11 @@
-import React, { useState } from "react";
-import ItemInput from "../ItemListContainer/ItemInput";
+import React from "react";
+import ItemInput from "./ItemInput";
+import { Link } from "react-router-dom";
 import "./ItemDetail.css";
 
-function ItemDetail({ product }) {
-	const [itemCount, setItemCount] = useState(1);
-	const countAdd = () => {
-		if (itemCount < product.stock) setItemCount(itemCount + 1);
-	};
-	const countSub = () => {
-		if (itemCount > 1) setItemCount(itemCount - 1);
-	};
+function ItemDetail(props) {
+	const { product, cartList } = props;
+	const actualiceStock = cartList.find((element) => product.id === element.id);
 	return (
 		<div className="detail">
 			<img className="detail__img" src={product.imgUrl} alt={product.title} />
@@ -17,8 +13,16 @@ function ItemDetail({ product }) {
 				<h2 className="detail__title">{product.title}</h2>
 				<p className="detail__desc">{product.description}</p>
 				<p className="detail__price">$ {product.price}</p>
-				<ItemInput onAdd={countAdd} onSub={countSub} count={itemCount} />
-				<span className="detail__stock">stock: {product.stock}</span>
+				<ItemInput product={product} />
+				<Link to="/cart">
+					<button className="item__button">Ir al carrito</button>
+				</Link>
+				<span className="detail__stock">
+					stock:
+					{actualiceStock
+						? product.stock - actualiceStock.quantity
+						: product.stock}
+				</span>
 			</div>
 		</div>
 	);

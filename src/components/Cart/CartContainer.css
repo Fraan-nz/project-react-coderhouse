@@ -1,0 +1,9 @@
+.cart {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+}
+.cart__title {
+	text-align: center;
+}
