@@ -39,6 +39,14 @@ export function CartProvider(props) {
 		return total;
 	};
 
+	const cartTotalQuantity = () => {
+		let totalQuantity = 0;
+		cartList.forEach((element) => {
+			totalQuantity += element.quantity;
+		});
+		return totalQuantity;
+	};
+
 	const cartClean = () => {
 		setCartList([]);
 		window.sessionStorage.removeItem("beerCart");
@@ -46,7 +54,14 @@ export function CartProvider(props) {
 
 	return (
 		<CartContext.Provider
-			value={{ addCart, deleteItem, cartTotal, cartClean, cartList }}
+			value={{
+				addCart,
+				deleteItem,
+				cartTotal,
+				cartClean,
+				cartTotalQuantity,
+				cartList,
+			}}
 			{...props}
 		/>
 	);

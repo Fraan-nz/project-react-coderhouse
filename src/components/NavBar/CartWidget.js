@@ -5,11 +5,11 @@ import { useCart } from "../../context/CartContext";
 import "./CartWidget.css";
 
 function CartWidget() {
-	const { cartList } = useCart();
+	const { cartTotalQuantity } = useCart();
 	return (
 		<div className="menu-cart">
 			<FontAwesomeIcon icon={faShoppingCart} className="menu-cart__icon" />
-			<span className="menu-cart__count">{cartList.length}</span>
+			<span className="menu-cart__count">{cartTotalQuantity()}</span>
 		</div>
 	);
 }
