@@ -1,4 +1,15 @@
-body {
+:root {
+	--darkGrey: rgb(40, 44, 52);
+	--purple: rgb(91, 56, 148);
+	--lightPurple: rgb(228, 215, 254);
+	--honey: rgb(254, 178, 6);
+}
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 	margin: 0;
+}
+body {
 	font-family: "Roboto Condensed", sans-serif;
 }

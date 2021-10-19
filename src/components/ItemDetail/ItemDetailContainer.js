@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import productsDb from "../../db/productsDb.json";
 import { useCart } from "../../context/CartContext";
-import "./ItemDetailContainer.css";
 
 function ItemDetailContainer() {
 	const [product, setProduct] = useState({});

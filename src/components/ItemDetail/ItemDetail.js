@@ -15,7 +15,9 @@ function ItemDetail(props) {
 				<p className="detail__price">$ {product.price}</p>
 				<ItemInput product={product} />
 				<Link to="/cart">
-					<button className="item__button">Ir al carrito</button>
+					<button className="item__button item__button--honey">
+						Ir al carrito
+					</button>
 				</Link>
 				<span className="detail__stock">
 					stock:

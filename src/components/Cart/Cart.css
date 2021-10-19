@@ -6,3 +6,11 @@
 .cart__item-img {
 	height: 100px;
 }
+.cart__info {
+	width: 60px;
+}
+.cart__item-icon {
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: var(--purple);
+}

@@ -8,11 +8,11 @@ function Cart(props) {
 	return (
 		<div className="cart__item">
 			<img className="cart__item-img" src={item.imgUrl} alt={item.title} />
-			<p>{item.title}</p>
-			<p>{item.description}</p>
-			<p>$ {item.price}</p>
-			<p>x{item.quantity}</p>
-			<p>$ {item.price * item.quantity}</p>
+			<p className="cart__info">{item.title}</p>
+			<p className="cart__info">{item.description}</p>
+			<p className="cart__info">$ {item.price}</p>
+			<p className="cart__info">x{item.quantity}</p>
+			<p className="cart__info">$ {item.price * item.quantity}</p>
 			<FontAwesomeIcon
 				icon={faMinusCircle}
 				onClick={() => deleteItem(item)}

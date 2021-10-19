@@ -14,7 +14,9 @@ function App() {
 					<TopNavbar />
 					<Switch>
 						<Route exact path="/">
-							{/* <ItemListContainer /> */}
+							<ItemListContainer />
+						</Route>
+						<Route exact path="/cart">
 							<CartContainer />
 						</Route>
 						<Route exact path="/:category">
@@ -22,9 +24,6 @@ function App() {
 						</Route>
 						<Route exact path="/product/:idProd">
 							<ItemDetailContainer />
-						</Route>
-						<Route exact path="/cart">
-							<CartContainer />
 						</Route>
 					</Switch>
 				</div>

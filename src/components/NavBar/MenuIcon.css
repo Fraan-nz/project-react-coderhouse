@@ -1,5 +1,6 @@
 .navbar__menu-icon {
 	font-size: 1.5rem;
+	color: var(--purple);
 }
 
 @media screen and (min-width: 800px) {

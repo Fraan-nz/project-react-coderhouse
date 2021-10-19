@@ -1,9 +1,5 @@
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-}
 .app {
-	background-color: #282c34;
+	background-color: var(--darkGrey);
 	min-height: 100vh;
+	width: 100%;
 }

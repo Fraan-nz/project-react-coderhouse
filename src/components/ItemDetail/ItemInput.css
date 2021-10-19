@@ -12,7 +12,7 @@
 .item__plus,
 .item__minus {
 	font-size: 1.8rem;
-	color: blueviolet;
+	color: var(--purple);
 	border: none;
 	background-color: inherit;
 	cursor: pointer;
@@ -20,15 +20,25 @@
 .item__button {
 	width: 100%;
 	padding: 0.4em 0;
-	border: 1px solid blueviolet;
+	border: 1px solid var(--purple);
 	border-radius: 5px;
-	background-color: blueviolet;
+	background-color: var(--purple);
 	color: white;
+	font-size: 1rem;
 	cursor: pointer;
 	margin-bottom: 5px;
 }
 .item__button:hover {
-	border: 1px solid blueviolet;
+	border: 1px solid var(--purple);
 	background-color: white;
-	color: blueviolet;
+	color: var(--purple);
+}
+.item__button--honey {
+	border: 1px solid var(--honey);
+	background-color: var(--honey);
+	color: white;
+}
+.item__button--honey:hover {
+	border: 1px solid var(--honey);
+	color: var(--honey);
 }

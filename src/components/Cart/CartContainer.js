@@ -1,5 +1,8 @@
 import React from "react";
 import { useCart } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons";
 import Cart from "./Cart";
 import "./CartContainer.css";
 
@@ -14,13 +17,23 @@ function CartContainer() {
 					{cartList.map((item, key) => {
 						return <Cart key={key} item={item} delete={deleteItem} />;
 					})}
-					<p>Total $ {cartTotal()}</p>
-					<button className="cart__clean" onClick={cartClean}>
-						Limpiar Carrito
-					</button>
+					<p className="cart__total">Total $ {cartTotal()}</p>
+					<div className="cart__buttons">
+						<button className="cart__btn cart__btn--clean" onClick={cartClean}>
+							Limpiar Carrito
+						</button>
+						<button className="cart__btn cart__btn--confirm">
+							Confirmar Compra
+						</button>
+					</div>
 				</div>
 			) : (
-				<h2>Su carrito esta vacío</h2>
+				<div className="cart__empty">
+					<h2>Su carrito esta vacío</h2>
+					<Link to="/">
+						<FontAwesomeIcon icon={faArrowCircleLeft} className="cart__back" />
+					</Link>
+				</div>
 			)}
 		</>
 	);

@@ -12,10 +12,10 @@ function TopNavbar() {
 
 	return (
 		<nav className="navbar">
+			<MenuIcon open={open} onClick={handleClick} />
 			<Link to="/" className="navbar__logo-link">
 				<span className="navbar__logo">LOGO</span>
 			</Link>
-			<MenuIcon open={open} onClick={handleClick} />
 			<MenuList open={open} />
 			<Link to="/cart" className="navbar__logo-link">
 				<CartWidget />
