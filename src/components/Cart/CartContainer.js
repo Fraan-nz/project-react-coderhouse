@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons";
 import Cart from "./Cart";
 import "./CartContainer.css";
+import { setOrder, updateDb } from "../../firebase";
+import user from "../../db/user.json";
 
 function CartContainer() {
 	const { deleteItem, cartTotal, cartClean, cartList } = useCart();
@@ -22,7 +24,12 @@ function CartContainer() {
 						<button className="cart__btn cart__btn--clean" onClick={cartClean}>
 							Limpiar Carrito
 						</button>
-						<button className="cart__btn cart__btn--confirm">
+						<button
+							className="cart__btn cart__btn--confirm"
+							onClick={() => {
+								setOrder(user, cartList, cartTotal());
+							}}
+						>
 							Confirmar Compra
 						</button>
 					</div>

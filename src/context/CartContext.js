@@ -8,12 +8,15 @@ export function CartProvider(props) {
 	);
 
 	const addCart = (item, quantity) => {
+		//Compruebo si el item ya esta en el carro
 		const inCart = cartList.find((element) => element.id === item.id);
 		if (!inCart) {
+			//Si no esta en el carro, creo un carro nuevo
 			const newCart = [...cartList, { ...item, quantity: quantity }];
 			setCartList(newCart);
 			window.sessionStorage.setItem("beerCart", JSON.stringify(newCart));
 		} else {
+			//Si ya esta en el carro, actualizo la cantidad
 			const currentCart = cartList.map((element) => {
 				if (element.id === item.id) {
 					return { ...item, quantity: quantity + element.quantity };
@@ -26,12 +29,14 @@ export function CartProvider(props) {
 	};
 
 	const deleteItem = (item) => {
+		//Filtro y guardo todos los items menos el que coincide con la id
 		const newCart = cartList.filter((element) => element.id !== item.id);
 		setCartList(newCart);
 		window.sessionStorage.setItem("beerCart", JSON.stringify(newCart));
 	};
 
 	const cartTotal = () => {
+		//Saco el total por cada item de la misma id
 		let total = 0;
 		cartList.forEach((element) => {
 			total += element.price * element.quantity;
@@ -40,6 +45,7 @@ export function CartProvider(props) {
 	};
 
 	const cartTotalQuantity = () => {
+		//Cantidad total de items en el carrito
 		let totalQuantity = 0;
 		cartList.forEach((element) => {
 			totalQuantity += element.quantity;
