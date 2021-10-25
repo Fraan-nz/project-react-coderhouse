@@ -1,7 +1,7 @@
 :root {
-	--darkGrey: rgb(40, 44, 52);
+	--darkGrey: rgb(221, 221, 221);
 	--purple: rgb(91, 56, 148);
-	--lightPurple: rgb(228, 215, 254);
+	--lightPurple: rgb(252, 252, 252);
 	--honey: rgb(254, 178, 6);
 }
 *,

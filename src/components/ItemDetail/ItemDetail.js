@@ -13,12 +13,14 @@ function ItemDetail(props) {
 				<h2 className="detail__title">{product.title}</h2>
 				<p className="detail__desc">{product.description}</p>
 				<p className="detail__price">$ {product.price}</p>
-				<ItemInput product={product} />
-				<Link to="/cart">
-					<button className="item__button item__button--honey">
-						Ir al carrito
-					</button>
-				</Link>
+				<div className="detail__input-container">
+					<ItemInput product={product} />
+					<Link to="/cart">
+						<button className="item__button item__button--honey">
+							Ir al carrito
+						</button>
+					</Link>
+				</div>
 				<span className="detail__stock">
 					stock:
 					{actualiceStock

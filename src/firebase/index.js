@@ -55,3 +55,16 @@ export const setOrder = async (user, orderList, total) => {
 		date: today,
 	});
 };
+//Actualizar db
+export const updateDb = async (orderList) => {
+	for (const prod of orderList) {
+		const prodId = prod.id;
+		const orderQuantity = prod.quantity;
+		const actualProd = doc(db, "products", prodId);
+		const product = await getDoc(actualProd);
+		const actualStock = product.data().stock;
+		await updateDoc(actualProd, {
+			stock: actualStock - orderQuantity,
+		});
+	}
+};

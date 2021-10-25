@@ -14,7 +14,12 @@ function TopNavbar() {
 		<nav className="navbar">
 			<MenuIcon open={open} onClick={handleClick} />
 			<Link to="/" className="navbar__logo-link">
-				<span className="navbar__logo">LOGO</span>
+				<img className="navbar__logo" src="../images/logo.png" alt="logo" />
+				<img
+					className="navbar__logo-mobile"
+					src="../images/logo-mobile.png"
+					alt="logo"
+				/>
 			</Link>
 			<MenuList open={open} />
 			<Link to="/cart" className="navbar__logo-link">

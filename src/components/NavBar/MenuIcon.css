@@ -1,4 +1,5 @@
 .navbar__menu-icon {
+	width: 50px;
 	font-size: 1.5rem;
 	color: var(--purple);
 }
