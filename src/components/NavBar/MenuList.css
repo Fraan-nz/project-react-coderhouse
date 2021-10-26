@@ -3,7 +3,7 @@
 	height: calc(100vh - 70px);
 	display: flex;
 	flex-direction: column;
-	justify-content: start;
+	justify-content: flex-start;
 	align-items: center;
 	gap: 3em;
 	list-style: none;

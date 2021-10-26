@@ -50,7 +50,9 @@ export function CartProvider(props) {
 		cartList.forEach((element) => {
 			totalQuantity += element.quantity;
 		});
-		return totalQuantity;
+
+		if (totalQuantity !== 0) return totalQuantity;
+		return "";
 	};
 
 	const cartClean = () => {

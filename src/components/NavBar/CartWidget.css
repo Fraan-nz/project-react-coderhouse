@@ -1,8 +1,9 @@
 .menu-cart {
 	width: 50px;
 	font-size: 1.5rem;
+	font-weight: 700;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	gap: 0.2em;
 }

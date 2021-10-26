@@ -21,7 +21,7 @@ function TopNavbar() {
 					alt="logo"
 				/>
 			</Link>
-			<MenuList open={open} />
+			<MenuList open={open} menuClick={handleClick} />
 			<Link to="/cart" className="navbar__logo-link">
 				<CartWidget />
 			</Link>
