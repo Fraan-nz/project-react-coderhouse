@@ -8,7 +8,7 @@ import {
 	addDoc,
 	updateDoc,
 } from "firebase/firestore";
-import db from "./firebaseConfig";
+import { db } from "./firebaseConfig";
 
 //Obtengo todos los docs de la base de datos
 export const getData = async () => {
@@ -36,8 +36,21 @@ export const getDataById = async (id) => {
 	const produdct = await getDoc(productId);
 	return { id: id, ...produdct.data() };
 };
+//Obtengo doc segund su id
+export const getOrderById = async (id) => {
+	const orderId = doc(db, "cart", id);
+	const order = await getDoc(orderId);
+	return { id: id, ...order.data() };
+};
 //Crear orden y guardar en db
-export const setOrder = async (user, orderList, total) => {
+export const setOrder = async (
+	name,
+	lastname,
+	direction,
+	currentUser,
+	orderList,
+	total
+) => {
 	const today = new Date();
 	const list = orderList.map((prod) => {
 		return {
@@ -48,12 +61,18 @@ export const setOrder = async (user, orderList, total) => {
 			subtotal: prod.price * prod.quantity,
 		};
 	});
-	await addDoc(collection(db, "cart"), {
-		buyer: user,
+	const newDoc = await addDoc(collection(db, "cart"), {
+		buyer: {
+			name,
+			lastname,
+			direction,
+			email: currentUser,
+		},
 		items: list,
 		total: total,
 		date: today,
 	});
+	return newDoc._key.path.segments[1]; //Retorno la id de la orden
 };
 //Actualizar db
 export const updateDb = async (orderList) => {

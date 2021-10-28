@@ -1,0 +1,9 @@
+.sesion__btn {
+	padding: 0.4em 0;
+	border: 1px solid var(--purple);
+	border-radius: 5px;
+	background-color: var(--purple);
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+}

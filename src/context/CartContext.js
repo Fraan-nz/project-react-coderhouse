@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 
 const CartContext = createContext();
 
-export function CartProvider(props) {
+export function CartContextProvider({ children }) {
 	const [cartList, setCartList] = useState(
 		() => JSON.parse(window.sessionStorage.getItem("beerCart")) || []
 	);
@@ -70,8 +70,9 @@ export function CartProvider(props) {
 				cartTotalQuantity,
 				cartList,
 			}}
-			{...props}
-		/>
+		>
+			{children}
+		</CartContext.Provider>
 	);
 }
 

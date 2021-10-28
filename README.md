@@ -1,5 +1,5 @@
 # **Proyecto Final CoderHouse**
----
+
 #### E-commerce creado en React
 
 La app cuenta con un stock de productos almacenados en **Cloud Firestore**, donde tambien quedara registrada cada orden de compra segun su ID.
@@ -13,10 +13,8 @@ La app cuenta con un stock de productos almacenados en **Cloud Firestore**, dond
 - Context
 - Firebase
 
-## 
-##
-##
----
+#
+
 **Modelo de orden de compra almacenada en firestore**
 ```
 ID

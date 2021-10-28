@@ -1,0 +1,46 @@
+.ticket {
+	width: 100%;
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	padding: 1em;
+	background-color: white;
+}
+.ticket__title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+.ticket__text {
+	margin-bottom: 0.2em;
+}
+.ticket__hr {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+.ticket__detail {
+	display: flex;
+	justify-content: space-between;
+}
+.ticket__prod:nth-child(1) {
+	width: 200px;
+}
+.ticket__prod:nth-child(2) {
+	width: 50px;
+	text-align: end;
+}
+.ticket__prod:nth-child(3) {
+	width: 100px;
+	text-align: end;
+}
+
+.ticket__total {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: end;
+}
+.ticket__back {
+	font-size: 4rem;
+	margin-top: 0.5em;
+}

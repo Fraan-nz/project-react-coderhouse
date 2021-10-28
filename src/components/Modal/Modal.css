@@ -1,0 +1,29 @@
+.modal {
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(5px);
+	z-index: 100;
+}
+.modal__container {
+	width: 100%;
+	max-width: 300px;
+	background-color: var(--darkGrey);
+	padding: 1em;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.modal__close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: var(--honey);
+	border: none;
+	cursor: pointer;
+	padding: 0.2em 0.6em;
+}

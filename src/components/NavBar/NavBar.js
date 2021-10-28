@@ -1,13 +1,14 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import MenuList from "./MenuList";
 import MenuIcon from "./MenuIcon";
 import CartWidget from "./CartWidget";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { SesionButton } from "../Login/Sesion";
 
 function TopNavbar() {
 	const [open, setOpen] = useState(false);
+
 	const handleClick = () => setOpen(!open);
 
 	return (
@@ -25,6 +26,7 @@ function TopNavbar() {
 			<Link to="/cart" className="navbar__logo-link">
 				<CartWidget />
 			</Link>
+			<SesionButton />
 		</nav>
 	);
 }
