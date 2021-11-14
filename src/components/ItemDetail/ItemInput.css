@@ -29,9 +29,8 @@
 	margin-bottom: 5px;
 }
 .item__button:hover {
-	border: 1px solid var(--purple);
-	background-color: white;
-	color: var(--purple);
+	border: 1px solid var(--purpleHover);
+	background-color: var(--purpleHover);
 }
 .item__button--honey {
 	border: 1px solid var(--honey);
@@ -39,6 +38,6 @@
 	color: white;
 }
 .item__button--honey:hover {
-	border: 1px solid var(--honey);
-	color: var(--honey);
+	border: 1px solid var(--honeyHover);
+	background-color: var(--honeyHover);
 }

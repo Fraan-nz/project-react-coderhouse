@@ -9,6 +9,7 @@ import Cart from "./Cart";
 import "./CartContainer.css";
 import ModalPortal from "../Modal/Modal";
 import Login from "../Login/Login";
+import { Helmet } from "react-helmet";
 
 function CartContainer() {
 	const { deleteItem, cartTotal, cartClean, cartList } = useCart();
@@ -27,6 +28,9 @@ function CartContainer() {
 
 	return (
 		<>
+			<Helmet>
+				<title>Carrito | NAIG</title>
+			</Helmet>
 			{cartList.length > 0 ? (
 				<>
 					<div className="cart">
@@ -64,12 +68,20 @@ function CartContainer() {
 					)}
 				</>
 			) : (
-				<div className="cart__empty">
-					<h2>Su carrito esta vacío</h2>
-					<Link to="/">
-						<FontAwesomeIcon icon={faArrowCircleLeft} className="cart__back" />
-					</Link>
-				</div>
+				<>
+					<Helmet>
+						<title>NAIG</title>
+					</Helmet>
+					<div className="cart__empty">
+						<h2>Su carrito esta vacío</h2>
+						<Link to="/">
+							<FontAwesomeIcon
+								icon={faArrowCircleLeft}
+								className="cart__back"
+							/>
+						</Link>
+					</div>
+				</>
 			)}
 		</>
 	);

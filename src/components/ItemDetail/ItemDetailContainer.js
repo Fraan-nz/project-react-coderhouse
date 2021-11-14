@@ -4,6 +4,7 @@ import ItemDetail from "./ItemDetail";
 import { useCart } from "../../context/CartContext";
 import { getDataById } from "../../firebase/index";
 import { Spinner } from "../Spinner/Spinner";
+import { Helmet } from "react-helmet";
 
 function ItemDetailContainer() {
 	const [product, setProduct] = useState({});
@@ -25,10 +26,20 @@ function ItemDetailContainer() {
 	return (
 		<>
 			{loading ? (
-				<Spinner />
+				<>
+					<Helmet>
+						<title>Cargando...</title>
+					</Helmet>
+					<Spinner />
+				</>
 			) : (
 				Object.keys(product).length !== 0 && (
-					<ItemDetail product={product} cartList={cartList} />
+					<>
+						<ItemDetail product={product} cartList={cartList} />
+						<Helmet>
+							<title>{product.title} | NAIG</title>
+						</Helmet>
+					</>
 				)
 			)}
 		</>

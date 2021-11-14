@@ -7,6 +7,7 @@ import usePagination from "../Pagination/usePagination";
 import ItemList from "./ItemList";
 import "./ItemListContainer.css";
 import "../Pagination/Pagination.css";
+import { Helmet } from "react-helmet";
 
 function ItemListContainer() {
 	const [data, setData] = useState([]);
@@ -17,6 +18,10 @@ function ItemListContainer() {
 	const changePage = ({ selected }) => {
 		jumpPage(selected + 1);
 	};
+	let title;
+	if (category) {
+		title = category === "comercial" ? "Comerciales" : "Artesalanes";
+	} else title = "Home";
 
 	useEffect(() => {
 		setLoading(true);
@@ -41,9 +46,21 @@ function ItemListContainer() {
 	return (
 		<>
 			{loading ? (
-				<Spinner />
+				<>
+					<Spinner />
+					<Helmet>
+						<title>Cargando...</title>
+					</Helmet>
+				</>
 			) : (
 				<>
+					<Helmet>
+						<title>{title} | NAIG</title>
+						<meta
+							name="description"
+							content="NAIG tu delivery favorito 24/7"
+						></meta>
+					</Helmet>
 					<ItemList products={currentData()} />
 					<ReactPaginate
 						previousLabel={"<<"}

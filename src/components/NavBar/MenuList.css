@@ -22,7 +22,7 @@
 }
 .navbar__item {
 	text-decoration: none;
-	font-weight: 400;
+	font-weight: 700;
 	color: var(--purple);
 }
 
@@ -36,5 +36,8 @@
 		justify-content: center;
 		margin-right: 85px;
 		gap: 1em;
+	}
+	.navbar__item:hover {
+		color: var(--purpleHover);
 	}
 }

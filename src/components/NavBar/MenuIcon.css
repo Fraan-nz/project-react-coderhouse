@@ -2,6 +2,7 @@
 	width: 50px;
 	font-size: 1.5rem;
 	color: var(--purple);
+	flex: 1;
 }
 
 @media screen and (min-width: 800px) {

@@ -67,14 +67,12 @@
 	background-color: var(--honey);
 }
 .cart__btn--clean:hover {
-	border: 1px solid var(--purple);
-	background-color: white;
-	color: var(--purple);
+	border: 1px solid var(--purpleHover);
+	background-color: var(--purpleHover);
 }
 .cart__btn--confirm:hover {
-	border: 1px solid var(--honey);
-	background-color: white;
-	color: var(--honey);
+	border: 1px solid var(--honeyHover);
+	background-color: var(--honeyHover);
 }
 .cart__empty {
 	width: 100%;

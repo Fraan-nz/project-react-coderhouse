@@ -40,14 +40,12 @@
 	background-color: var(--honey);
 }
 .checkout__button--cancel:hover {
-	border: 1px solid var(--purple);
-	background-color: white;
-	color: var(--purple);
+	border: 1px solid var(--purpleHover);
+	background-color: var(--purpleHover);
 }
 .checkout__button--confirm:hover {
-	border: 1px solid var(--honey);
-	background-color: white;
-	color: var(--honey);
+	border: 1px solid var(--honeyHover);
+	background-color: var(--honeyHover);
 }
 @media screen and (min-width: 800px) {
 	.checkout {

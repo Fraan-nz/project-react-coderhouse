@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons";
 import { Spinner } from "../Spinner/Spinner";
 import "./Ticket.css";
+import { Helmet } from "react-helmet";
 
 export default function Ticket() {
 	const [loading, setLoading] = useState(false);
@@ -43,10 +44,18 @@ export default function Ticket() {
 	return (
 		<>
 			{loading ? (
-				<Spinner />
+				<>
+					<Helmet>
+						<title>Cargando...</title>
+					</Helmet>
+					<Spinner />
+				</>
 			) : (
 				Object.keys(order).length !== 0 && (
 					<>
+						<Helmet>
+							<title>Tu ordern | NAIG</title>
+						</Helmet>
 						<div className="ticket">
 							<h2 className="ticket__title">Naig Delivery</h2>
 							<p className="ticket__text">Ticket: {idTicket}</p>

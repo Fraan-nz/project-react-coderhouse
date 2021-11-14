@@ -1,4 +1,5 @@
 .sesion__btn {
+	width: 70px;
 	padding: 0.4em 0;
 	border: 1px solid var(--purple);
 	border-radius: 5px;
@@ -6,4 +7,13 @@
 	color: white;
 	font-size: 1rem;
 	cursor: pointer;
+}
+@media screen and (min-width: 800px) {
+	.sesion__btn {
+		width: 120px;
+	}
+	.sesion__btn:hover {
+		background-color: var(--purpleHover);
+		border: 1px solid var(--purpleHover);
+	}
 }

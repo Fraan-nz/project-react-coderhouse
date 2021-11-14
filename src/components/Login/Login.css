@@ -28,6 +28,10 @@
 	font-weight: 600;
 	letter-spacing: 0.5px;
 }
+.form__button:hover {
+	border: 1px solid var(--purpleHover);
+	background-color: var(--purpleHover);
+}
 .form__buttons {
 	width: 100%;
 	margin-top: 1em;

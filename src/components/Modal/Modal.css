@@ -20,10 +20,14 @@
 }
 .modal__close {
 	position: absolute;
+	font-weight: 700;
 	top: 0;
 	right: 0;
 	background-color: var(--honey);
 	border: none;
 	cursor: pointer;
 	padding: 0.2em 0.6em;
+}
+.modal__close:hover {
+	background-color: var(--honeyHover);
 }
