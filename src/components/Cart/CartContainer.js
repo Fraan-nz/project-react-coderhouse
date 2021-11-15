@@ -29,7 +29,7 @@ function CartContainer() {
 	return (
 		<>
 			<Helmet>
-				<title>Carrito | NAIG</title>
+				<title>NAIG | Carrito</title>
 			</Helmet>
 			{cartList.length > 0 ? (
 				<>

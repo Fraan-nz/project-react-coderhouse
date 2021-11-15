@@ -37,7 +37,7 @@ function ItemDetailContainer() {
 					<>
 						<ItemDetail product={product} cartList={cartList} />
 						<Helmet>
-							<title>{product.title} | NAIG</title>
+							<title>NAIG | {product.title}</title>
 						</Helmet>
 					</>
 				)

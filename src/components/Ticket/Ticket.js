@@ -54,7 +54,7 @@ export default function Ticket() {
 				Object.keys(order).length !== 0 && (
 					<>
 						<Helmet>
-							<title>Tu ordern | NAIG</title>
+							<title>NAIG | Tu ordern</title>
 						</Helmet>
 						<div className="ticket">
 							<h2 className="ticket__title">Naig Delivery</h2>

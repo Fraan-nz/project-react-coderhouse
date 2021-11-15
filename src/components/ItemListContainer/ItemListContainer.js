@@ -55,7 +55,7 @@ function ItemListContainer() {
 			) : (
 				<>
 					<Helmet>
-						<title>{title} | NAIG</title>
+						<title>NAIG | {title}</title>
 						<meta
 							name="description"
 							content="NAIG tu delivery favorito 24/7"

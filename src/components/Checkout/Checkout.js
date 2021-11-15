@@ -5,6 +5,7 @@ import { setOrder, updateDb } from "../../firebase/index";
 import { useHistory } from "react-router";
 import "./Checkout.css";
 import { Helmet } from "react-helmet";
+import CreditCard from "../CreditCard/CreditCard";
 
 export default function Checkout() {
 	const { cartTotal, cartClean, cartList } = useCart();
@@ -12,24 +13,27 @@ export default function Checkout() {
 	const [name, setName] = useState("");
 	const [lastname, setLastame] = useState("");
 	const [direction, setDirection] = useState("");
+	const [validateCard, setValidateCard] = useState(false);
 	const history = useHistory();
-
 	const currentUser = user ? user.email : "";
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setOrder(
-			name,
-			lastname,
-			direction,
-			currentUser,
-			cartList,
-			cartTotal()
-		).then((id) => {
-			history.push(`/ticket/${id}`);
-		});
-		updateDb(cartList).catch((err) => console.log(err));
-		cartClean();
+
+		if (validateCard === true) {
+			setOrder(
+				name,
+				lastname,
+				direction,
+				currentUser,
+				cartList,
+				cartTotal()
+			).then((id) => {
+				history.push(`/ticket/${id}`);
+			});
+			updateDb(cartList).catch((err) => console.log(err));
+			cartClean();
+		}
 	};
 	const handleCancel = (e) => {
 		e.preventDefault();
@@ -38,7 +42,7 @@ export default function Checkout() {
 	return (
 		<>
 			<Helmet>
-				<title>Tu pedido | NAIG</title>
+				<title>NAIG | Tu pedido</title>
 			</Helmet>
 			<div className="checkout">
 				<h2 className="checkout__title">Confirmar Compra</h2>
@@ -46,7 +50,9 @@ export default function Checkout() {
 					Email
 					<span>{currentUser}</span>
 				</label>
+				<CreditCard onValidate={setValidateCard} />
 				<form onSubmit={handleSubmit}>
+					<h4 className="checkout__subtitle">Datos facturación</h4>
 					<label className="checkout__label">
 						Nombre
 						<input
