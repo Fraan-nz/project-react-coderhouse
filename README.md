@@ -25,6 +25,7 @@ Para poder realizar el proceso de compra es necesario estar logeado con un mail 
 - [React Paginate](https://www.npmjs.com/package/react-paginate)
 - [React Spinners](https://www.npmjs.com/package/react-spinners)
 - [Vercel](https://www.npmjs.com/package/vercel)
+- [Firebase 9](https://firebase.google.com/docs/firestore/quickstart#web-version-9)
 
 ---
 **Modelo de orden de compra almacenada en firestore**
