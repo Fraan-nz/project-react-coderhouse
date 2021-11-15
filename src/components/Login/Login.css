@@ -41,3 +41,8 @@
 	flex-direction: column;
 	gap: 0.4em;
 }
+.error {
+	color: red;
+	font-size: 0.8rem;
+	margin-bottom: 1em;
+}

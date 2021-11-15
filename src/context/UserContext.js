@@ -23,15 +23,15 @@ export function UserContextProvider({ children }) {
 	}, []);
 
 	const regis = (email, password) => {
-		createUserWithEmailAndPassword(auth, email, password)
-			.then((res) => console.log(res))
-			.catch((err) => console.log(err.message));
+		createUserWithEmailAndPassword(auth, email, password).catch((err) =>
+			console.log(err.message)
+		);
 	};
 
 	const login = (email, password) => {
-		signInWithEmailAndPassword(auth, email, password)
-			.then((res) => console.log(res))
-			.catch((err) => console.log(err.message));
+		signInWithEmailAndPassword(auth, email, password).catch((err) =>
+			console.log(err.message)
+		);
 	};
 
 	const logout = () => {
