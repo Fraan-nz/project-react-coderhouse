@@ -22,7 +22,7 @@
 	border-radius: 5px;
 	border: 1px solid var(--purple);
 	background-color: var(--purple);
-	color: white;
+	color: var(--white);
 	font-size: 1rem;
 	cursor: pointer;
 	font-weight: 600;

@@ -1,8 +1,8 @@
 :root {
-	--darkGrey: rgb(221, 221, 221);
+	--grey: rgb(221, 221, 221);
 	--purple: rgb(91, 56, 148);
 	--purpleHover: rgb(143, 81, 241);
-	--lightPurple: rgb(252, 252, 252);
+	--white: rgb(252, 252, 252);
 	--honey: rgb(254, 178, 6);
 	--honeyHover: rgb(245, 216, 50);
 }
